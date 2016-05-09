@@ -8,75 +8,72 @@
 ### Функцональные требования
 
 1. Дана следующая коллекция ...
-```ruby
-# Выбираем 23 случайных элемента от 0 до 10000
-arr = (1..10000).to_a.sample(23)
-p arr
+  ```ruby
+  # Выбираем 23 случайных элемента от 0 до 10000
+  arr = (1..10000).to_a.sample(23)
+  p arr
 
-#=> [61, 6969, 9885, 4722, 158, 9979, 4568, 3079, 2590, 2345, 9086, 9611, 1384, 8444, 7815, 5444, 4852, 1317, 1565, 8466, 7220, 5146, 4558]
-```
-```ruby
-# Затем выбираем элементы, которые делятся на 3 без остатка, 
-# используя оператор % (остаток от деления)
-p arr.select { |element| element % 3 == 0 }
+  #=> [61, 6969, 9885, 4722, 158, 9979, 4568, 3079, 2590, 2345, 9086, 9611, 1384, 8444, 7815, 5444, 4852, 1317, 1565, 8466, 7220, 5146, 4558]
+  ```
+  ```ruby
+  # Затем выбираем элементы, которые делятся на 3 без остатка, 
+  # используя оператор % (остаток от деления)
+  p arr.select { |element| element % 3 == 0 }
 
-#=> [6969, 9885, 4722, 7815, 1317, 8466]
-```
-
+  #=> [6969, 9885, 4722, 7815, 1317, 8466]
+  ```
 2. Написать цепочку вызовов комманд, которые находят все числа такие, что
 
-  - принадлежат диапазону чисел 1..10000 включительно
-  - делятся на 3 (то есть, element % 3 == 0)
-  - не меньше 5000
-  - отсортрованы в обратном порядке
+  * принадлежат диапазону чисел 1..10000 включительно
+  * делятся на 3 (то есть, element % 3 == 0)
+  * не меньше 5000
+  * отсортрованы в обратном порядке
 
 ### Приступая к работе
 
 1. Скачаем заглушку пректа их репозитория. Коренем прокта является директория 
 `student-start` имеющая следующую структуру: 
-```text
-|-- assignmet02-solution.rb
-|-- .rspec (important hidden file)
-`-- spec
-    |-- lesson2_spec.rb
-    `-- spec_helper.rb
-```
+  ```text
+  |-- assignmet02-solution.rb
+  |-- .rspec (important hidden file)
+  `-- spec
+      |-- lesson2_spec.rb
+      `-- spec_helper.rb
+  ```
   * assignmet02-solution.rb - файл-заглушка решения.
   Ваше решение должно быть помещено в этот файл.
   * spec - директория содержит тесты для проверки решения. Содержимое директории не следует изменять.
   * .rspec - файл конфигурирования unit тестов. Его так же не следует менять.
 
 2. Установите следующие `gem`, используемые `rspec`. Возможно некторые из них уже установлены. 
-```shell
-$ gem install rspec
-$ gem install rspec-its
-```
-
+  ```shell
+  $ gem install rspec
+  $ gem install rspec-its
+  ```
 3. Запустите комманду `rspec`, чтобы выполнить юнит-тесты, определенные в директории
 `spec`. Комманда необходимо запускать в контексте корневого каталога проекта. 
 Результатом выполнения будут сообщения о проваленных тестах до тех пор, пока вы не выполнете 
 задание.
-```shell
-$ rspec
+  ```shell
+  $ rspec
 
-FF.F....
+  FF.F....
 
-Failures:
+  Failures:
 
-  1) lesson2 check results unexpected number of output lines
-  2) lesson2 check results unexpected minimum number
-  3) lesson2 check results unexpected sort order
+    1) lesson2 check results unexpected number of output lines
+    2) lesson2 check results unexpected minimum number
+    3) lesson2 check results unexpected sort order
 
-Finished in 0.02205 seconds (files took 0.15601 seconds to load)
-8 examples, 3 failures
+  Finished in 0.02205 seconds (files took 0.15601 seconds to load)
+  8 examples, 3 failures
 
-Failed examples:
+  Failed examples:
 
-rspec ./spec/lesson2_spec.rb:16 # lesson2 check results unexpected number of output lines
-rspec ./spec/lesson2_spec.rb:20 # lesson2 check results unexpected minimum number
-rspec ./spec/lesson2_spec.rb:32 # lesson2 check results unexpected sort order
-```
-
+  rspec ./spec/lesson2_spec.rb:16 # lesson2 check results unexpected number of output lines
+  rspec ./spec/lesson2_spec.rb:20 # lesson2 check results unexpected minimum number
+  rspec ./spec/lesson2_spec.rb:32 # lesson2 check results unexpected sort order
+  ```
 4. Выполните задание и перезапустите тесты. Скорее всего вам прийдется воспользоваться методами
 `reject`, `sort` и `reverse`, чтобы выполнить задание.
 
@@ -87,17 +84,17 @@ rspec ./spec/lesson2_spec.rb:32 # lesson2 check results unexpected sort order
 
 2. Скрипт должен содержать цепочку вызовов комманд, которые находят числа такие, что они
 
-  - принадлежат диапазону 1..10000 включительно
-  - делятся на 3 (т.е., element % 3 == 0)
-  - не меньше 5000
-  - отсортированы в обратном порядке
+  * принадлежат диапазону 1..10000 включительно
+  * делятся на 3 (т.е., element % 3 == 0)
+  * не меньше 5000
+  * отсортированы в обратном порядке
 
 3. Ваш ответ необходимо распечатать как сассив чисел, используя комманду печати `p`,
 помещенную в конце скрипта.
-```ruby
-...
-[(number), (number), (number), ...]
-```
+  ```ruby
+  ...
+  [(number), (number), (number), ...]
+  ```
 
 ### Оценка задания
 
