@@ -1,3 +1,105 @@
+# Prepare work environment
+
+## Installing VirtualBox
+
+VirtualBox [https://www.virtualbox.org/](https://www.virtualbox.org/) is an open source tool sponsored by Oracle, which lets you create, manage, and use virtual machines on your own computer.
+
+VirtualBox is a graphical program, which lets you visually create virtual machines, allocate resources, load external media such as operating system CDs, and view the screen of the virtual machine. Vagrant wraps on top of this and provides an intuitive command-line interface along with integration of additional tools (including provisioners such as Puppet and Chef), so that we don't need to worry about how VirtualBox works or what to do with it; Vagrant takes care of it for us.
+
+The first stage is to download the installer from the VirtualBox downloads page [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads). We need to select the download, which relates to our computer (OS X, Windows, Linux, or Solaris).
+
+Once downloaded, let's open it up and run the installer. On OS X, this involves clicking on the VirtualBox.pkg icon that is shown on the screen. On Windows, simply opening the installer opens the installation wizard.
+
+Before the installer runs, it first checks to see if the computer is capable of having VirtualBox installed we need to click on Continue to begin the installation process. While this process will vary from OS X to Windows to Linux, the process is very similar across all platforms. There are fully detailed installation instructions for all platforms on the VirtualBox website [https://www.virtualbox.org/manual/ ch02.html)](https://www.virtualbox.org/manual/ch02.html).
+
+## Installing Vagrant
+
+Now that we have the prerequisites installed on our computer, we can actually install Vagrant itself. This process is similar to that of installing VirtualBox. First, let's download the relevant installer from the Vagrant page [http://downloads. vagrantup.com/tags/v1.2.2](http://downloads. vagrantup.com/tags/v1.2.2).
+
+Let's open up the installer and start the process. Again, on OS X, the first step is to double-click on the Vagrant.pkg icon.
+
+We now need to follow the installation steps which are provided; this is very similar to the earlier steps for VirtualBox, and for most of the software packages in general.
+
+Let's verify if Vagrant has been successfully installed, by opening a command prompt (terminal on Linux/OS X or cmd on Windows) and running Vagrant.
+```shell
+vagrant
+```
+
+The preceding output shows that we have successfully installed Vagrant, and that we are able to run it.
+
+## Using Vagrant for virtualization
+
+### Creating Vagrant projects
+
+Provided we are in the directory we wish to convert into a new Vagrant project, we can simply run the following command at the terminal:
+```shell
+vagrant init precise64 http://files.vagrantup.com/precise64.box
+```
+This runs the init subcommand within Vagrant, and instructs Vagrant to create a new project with configuration to use the box named precise64, and if the box is not found, to import the box located at [http://files.vagrantup.com/precise64.box](http://files.vagrantup.com/precise64.box) when the Vagrant environment is booted for the first time. The name precise64 can be used within other new and existing projects to refer to this base box. Base boxes are downloaded and stored in a place Vagrant can access and reuse.
+
+Or you may use other prepared boxes from [https://atlas.hashicorp.com/boxes/search](https://atlas.hashicorp.com/boxes/search), e.g.
+```shell
+vagrant init ubuntu/trusty64
+```
+
+The initialization of the new project creates a file named Vagrantfile within our project's folder. When we go to boot a Vagrant virtual environment, Vagrant looks for this configuration file to determine what to do. Because everything related to the Vagrant environment is either within this file or the provisioning (SSH, Puppet, and Chef) files within our project, it's easy to maintain the environment under version control and share it with colleagues.
+
+### Controlling guest machines
+
+Now that we have a project initialized, we need to be able to control our guest machine. At the moment, all we have is a Vagrantfile file, which defines the configuration for the project.
+
+#### Powering up the virtual machine
+
+We can power up the virtual machine using the 
+```shell
+vagrant up 
+```
+command.
+
+#### Suspending the virtual machine
+
+We can save the current state of the virtual machine to disk so that we can resume it later. If we run vagrant suspend, it will suspend the VM and stop it from consuming our machine's resources (except for the disk space it will occupy), ready for us to resume later:
+
+```shell
+vagrant suspend
+```
+
+#### Resuming the virtual machine
+
+In order to resume a previously suspended virtual machine, we simply run 
+```shell
+vagrant resume
+```
+
+#### Shutting down the virtual machine
+
+We can shut down a running virtual machine using the 
+```shell
+vagrant halt 
+```
+command. This instructs the VM to stop all running processes and shut down. To use it again, we need to run `vagrant up`, which will power on the machine; by default, the `up` command will re-run any provisioning tools we have set up.
+
+#### Starting from scratch
+
+Sometimes, things go wrong. It's not inconceivable that we might make some changes to our virtual machine and find out that it no longer works. Thankfully, since we have a base box, configuration file, and provisioning files, which are all stored separately, we can instruct Vagrant to destroy our virtual machine, and then create it again, using the configurations to set it up. This is done via the destroy subcommand, and then the up subcommand to start it again:
+
+```shell
+vagrant destroy
+vagrant up
+```
+
+Of course, if we update our Vagrantfile, provisioning manifests, or application code that can also break things; so it is important we use a Version Control System to properly manage our project's code and configuration so we can undo changes there to; Vagrant can only do so much to help us!
+
+#### Connecting to the virtual machine over SSH
+
+If we run the 
+```shell
+vagrant ssh
+```
+command, Vagrant will then connect to the VM over SSH. Alternatively, we could use SSH to connect to localhost with port 2222, and this will tunnel into the VM.
+
+After we have run Ubuntu on Vagrant and connected to it via ssh, we are ready to...
+
 # Install Ruby and Ruby on Rails with rbenv on Ubuntu
 
 ## Introduction
