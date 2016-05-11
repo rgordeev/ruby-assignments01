@@ -19,10 +19,9 @@ class Person
   #have a `search` method to locate all people with a matching `last_name`
   def self.search(last_name)
     #accept a `last_name` parameter
-   @l_name = last_name
     #search the `people` class attribute for instances with the same `last_name`
     #return a collection of matching instances
-   @@people.select {|f| f.last_name==@l_name}
+    @@people.select {|f| f.last_name==last_name}
   end
 
   #have a `to_s` method to return a formatted string of the person's name
