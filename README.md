@@ -193,7 +193,8 @@ In summuary all you have to do for prepearing your working environment is to pas
 1. Install VirtualBox
 2. Install Vagrant
 3. Execute following commands in your terminal
-  ```shell
+ 
+```shell
     vagrant init ubuntu/trusty64
     vagrant up
     vagrant ssh # here you are connecting to the virtual machine
@@ -214,4 +215,4 @@ In summuary all you have to do for prepearing your working environment is to pas
     gem install rails
     rbenv rehash
     rails -v # check rails version
-  ```
+```
