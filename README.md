@@ -195,7 +195,10 @@ In summuary all you have to do for prepearing your working environment is to pas
 3. Execute following commands in your terminal
  
 ```shell
-    vagrant init ubuntu/trusty64
+    cd ~ # goto your user home directory
+    mkdir my_vagrant_project # create directory for your Vagrant project
+    cd my_vagrant_project # make Vagrant project directory as a current
+    vagrant init ubuntu/trusty64 # init Vargant project based on ubuntu/trusty64 box
     vagrant up
     vagrant ssh # here you are connecting to the virtual machine
     sudo apt-get update
