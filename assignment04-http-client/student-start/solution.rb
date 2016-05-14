@@ -1,3 +1,3 @@
-require_relative "module3_1_assignment"
+require_relative "assignment04-solution"
 
 puts Recipe.for("chocolate")
