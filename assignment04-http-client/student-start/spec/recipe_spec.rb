@@ -1,4 +1,4 @@
-require_relative "../module3_1_assignment"
+require_relative "../assignment04-solution"
 require 'rspec'
 require 'rspec/its'
 require 'webmock/rspec'
