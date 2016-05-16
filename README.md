@@ -185,3 +185,37 @@ rails -v
 ```
 
 If it installed properly, you will see the version of Rails that was installed.
+
+## Summary
+
+In summuary all you have to do for prepearing your working environment is to pass through a few simple steps:
+
+1. Install VirtualBox
+2. Install Vagrant
+3. Execute following commands in your terminal
+ 
+```shell
+    cd ~ # goto your user home directory
+    mkdir my_vagrant_project # create directory for your Vagrant project
+    cd my_vagrant_project # make Vagrant project directory as a current
+    vagrant init ubuntu/trusty64 # init Vargant project based on ubuntu/trusty64 box
+    vagrant up
+    vagrant ssh # here you are connecting to the virtual machine
+    sudo apt-get update
+    sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+    cd ~
+    git clone git://github.com/sstephenson/rbenv.git .rbenv
+    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
+    echo 'eval "$(rbenv init -)"' >> ~/.bash_profil
+    git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+    echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bash_profile
+    source ~/.bash_profile
+    rbenv install -v 2.2.5
+    rbenv global 2.2.5
+    ruby -v # check ruby version
+    echo "gem: --no-document" > ~/.gemrc
+    gem install bundler
+    gem install rails
+    rbenv rehash
+    rails -v # check rails version
+```
