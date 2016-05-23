@@ -89,7 +89,7 @@
     ```
 
    Примечание: Используйте Gemfile из репозитория. 
-   Пользователям Windows потребуется добавить Gemfile следующие зависимости:
+   Пользователям Windows потребуется добавить в Gemfile следующие зависимости:
 
    ```ruby
    # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -292,7 +292,7 @@ $ rspec spec/assignment_spec -e rq01 -e rq02
 
 ### Pull request
 
-Добавьте в индекс комита следующие файлы и деректории и создайте pull request на 
+Добавьте в индекс комита следующие файлы и директории и создайте pull request на 
 репозиторий `https://github.com/rgordeev/ruby-assignments01` 
 
 ```text
