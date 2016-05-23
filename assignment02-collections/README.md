@@ -74,7 +74,7 @@
   rspec ./spec/lesson2_spec.rb:20 # lesson2 check results unexpected minimum number
   rspec ./spec/lesson2_spec.rb:32 # lesson2 check results unexpected sort order
   ```
-4. Выполните задание и перезапустите тесты. Скорее всего вам прийдется воспользоваться методами
+4. Выполните задание и перезапустите тесты. Скорее всего, вам придется воспользоваться методами
 `reject`, `sort` и `reverse`, чтобы выполнить задание.
 
 ### Технические требования
