@@ -4,7 +4,7 @@ require 'rspec/its'
 describe "lesson1" do
 
   context "check results" do
-    result=`ruby assignment01-solution.rb`.chomp!
+    result=`ruby module2_lesson1_formative.rb`.chomp!
 
     it "unexpected output" do
       expect(result).to eq("I guess nothing matched... But why?")
@@ -12,7 +12,7 @@ describe "lesson1" do
   end
 
   context "check implementation" do
-    srcCode = File.open("assignment01-solution.rb", "r").read
+    srcCode = File.open("module2_lesson1_formative.rb", "r").read
 
     it "remove if clause" do
       expect(srcCode).not_to include("if")
