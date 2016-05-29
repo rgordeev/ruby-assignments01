@@ -12,11 +12,11 @@ class Assignment
   end
 
   def find_allusers(offset, limit)
-    User.all.offset(offset).limit(limit).order(updated_at: :asc)
+    User.unscoped.all.offset(offset).limit(limit).order(updated_at: :asc)
   end
 
   def find_alllists(offset, limit)
-    TodoList.all.offset(offset).limit(limit).order(list_due_date: :desc)
+    TodoList.unscoped.all.offset(offset).limit(limit).order(list_due_date: :desc)
   end
 
   def find_user_byname(username)
