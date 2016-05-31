@@ -1,4 +1,3 @@
-
 require 'httparty'
 
 class Recipe
