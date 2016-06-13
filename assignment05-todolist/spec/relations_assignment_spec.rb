@@ -209,6 +209,14 @@ describe "Relations Assignment" do
       end
       
       context "rq07b" do
+      
+        before :all do
+            TodoItem.destroy_all
+            TodoList.destroy_all
+            User.destroy_all
+            load "#{Rails.root}/db/seeds.rb"
+        end
+        
         subject(:dbUser) { User.where(username:"rich").first }
 
         scenario "will only authenticate user with proper password" do
