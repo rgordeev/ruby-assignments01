@@ -16,7 +16,7 @@ User.all.offset(offset).limit(limit).order(updated_at: :asc)
   end
 
   def find_alllists(offset, limit)
-TodoList.all.offset(offset).limit(limit).order(updated_at: :desc)
+TodoList.unscoped.all.offset(offset).limit(limit).order(updated_at: :desc)
   end
 
   def find_user_byname(username)
