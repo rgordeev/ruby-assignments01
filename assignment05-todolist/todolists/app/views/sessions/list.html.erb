@@ -1,0 +1,12 @@
+<h1>Item list</h1>
+Logged in succesfully<br>
+You have some things to do
+<ul>
+   <% @list.todo_items.each do |item| %>
+   <li><%= item.title  %> , <%= item.due_date %></li>
+   <% end %>
+</ul>
+
+ <li>
+    <%= link_to "Log out", logout_path, method: "delete" %>
+ </li>

@@ -1,0 +1,48 @@
+require_relative '../config/environment'
+
+# Use Active Record Model methods to implement the following methods.
+class Assignment
+
+  def create_user(params)
+	User.create(params)
+  end
+
+  def create_todolist(params)
+	TodoList.create(params)
+  end
+
+  def find_allusers(offset, limit)
+	User.order(:created_at).limit(limit).offset(offset)
+  end
+
+  def find_alllists(offset, limit)
+	TodoList.order(:list_due_date).limit(limit).offset(offset)
+  end
+
+  def find_user_byname(username)
+	User.where(username: username)
+  end 
+
+  def find_todolist_byname(name)
+	TodoList.where(list_name: name)
+  end     
+
+  def get_user_byid(id)
+	User.where(id: id)
+  end
+
+  def get_todolist_byid)
+  end
+
+  def update_password(id, password_digest)
+  end
+
+  def update_listname(id, name)
+  end 
+
+  def delete_user(id)
+  end 
+
+  def delete_todolist(id)
+  end
+end
