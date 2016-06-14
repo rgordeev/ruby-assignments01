@@ -7,7 +7,11 @@ def login_path
 
 end
 
+
 def logoutpage
+
+end
+def logout
 redirect_to action: :login_path
 end
 
