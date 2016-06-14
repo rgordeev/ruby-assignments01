@@ -6,10 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 users = User.create([
-  {:username => "Fiorina", :password_digest => "xxx"},
-  {:username => "Trump", :password_digest => "xxx"},
-  {:username => "Carson", :password_digest => "xxx"},
-  {:username => "Clinton", :password_digest => "xxx"}])
+  {:username => "Fiorina", :password => "123abc", :password_confirmation => "123abc"},
+  {:username => "Trump", :password => "123abc", :password_confirmation => "123abc"},
+  {:username => "Carson", :password => "123abc", :password_confirmation => "123abc"},
+  {:username => "Clinton", :password => "123abc", :password_confirmation => "123abc"}])
 users[0].create_profile(:first_name => "Carly",:last_name => "Fiorina", :gender => "female", :birth_year => 1954, :photo => "path/to/photo")
 users[1].create_profile(:first_name => "Donald", :last_name => "Trump", :gender => "male", :birth_year => 1946, :photo => "path/to/photo")
 users[2].create_profile(:first_name => "Ben", :last_name => "Carson", :gender => "male", :birth_year => 1951, :photo => "path/to/photo")
