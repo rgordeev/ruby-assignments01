@@ -7,6 +7,10 @@ def login_path
 
 end
 
+def logoutpage
+redirect_to action: :login_path
+end
+
 def log
 name = params[:users]
 name2 = name[:username].to_s
@@ -20,6 +24,7 @@ if @test == false
 redirect_to action: :login_path
 else
 @list = TodoList.find_by user_id: @user[:id]
+@count = @list.todo_items.length
 end
 end
 end

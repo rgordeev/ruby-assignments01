@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 resources :login
-get 'login_path' => "login#login_path", as: "login_path"
-post 'log' => "login#log", as: "routes_path"
+get 'login_path' => 'login#login_path', as: 'login_path'
+post 'log' => 'login#log', as: 'routes_path'
+get 'logoutpage' => 'login#logoutpage'
+#post 'login_path/#' => 'login#login_path'
 #controller :login do
 #get  'index' => :index
 #get  'login_path' => :login_path
