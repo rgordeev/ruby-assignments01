@@ -217,7 +217,7 @@ describe "Relations Assignment" do
             load "#{Rails.root}/db/seeds.rb"
         end
         
-        subject(:dbUser) { User.where(username:"rich").first }
+        subject(:dbUser) { User.where(username:"Clinton").first }
 
         scenario "will only authenticate user with proper password" do
             expect(dbUser.authenticate("wrongPass")).to be false
@@ -256,7 +256,7 @@ describe "Relations Assignment" do
       context "rq07e" do
         scenario "Successful login results in navigation to list items page" do
           visit(login_path)
-          fill_in "user[username]", with: "rich"
+          fill_in "user[username]", with: "Clinton"
           fill_in "user[password]", with: "123abc"
           click_button "Login"
           expect(URI.parse(page.current_url).path).to eq(root_path)
@@ -265,7 +265,7 @@ describe "Relations Assignment" do
 
         scenario "Unsuccessful login results in return to login page" do
           visit (login_path)
-          fill_in "user[username]", with: "rich"
+          fill_in "user[username]", with: "Clinton"
           fill_in "user[password]", with: "xxxxx"
           click_button "Login"
           expect(URI.parse(page.current_url).path).to eq(login_path)
