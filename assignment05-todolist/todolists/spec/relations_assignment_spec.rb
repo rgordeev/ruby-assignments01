@@ -180,6 +180,7 @@ describe "Relations Assignment" do
     end
   end
 
+
   context "rq08" do # Re-use and update 'TodoItem' model and database table
     it "User has a 1:many relationship with TodoItem" do
       expect(User.reflect_on_association(:todo_items).macro).to eq :has_many

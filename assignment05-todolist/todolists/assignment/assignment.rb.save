@@ -8,15 +8,15 @@ class Assignment
   end
 
   def create_todolist(params)
-	TodoList.create(list_name: params[:name], list_due_date: params[:due_date])
+	TodoList.create(params)
   end
 
   def find_allusers(offset, limit)
-	User.unscoped.order(:created_at).limit(limit).offset(offset)
+	User.order(:created_at).limit(limit).offset(offset)
   end
 
   def find_alllists(offset, limit)
-	TodoList.unscoped.limit(limit).offset(offset).order(list_due_date: :desc) 
+	TodoList.order(:list_due_date).limit(limit).offset(offset)
   end
 
   def find_user_byname(username)
@@ -28,26 +28,21 @@ class Assignment
   end     
 
   def get_user_byid(id)
-	User.find(id)
+	User.where(id: id)
   end
 
-  def get_todolist_byid(id)
-	TodoList.find(id)
+  def get_todolist_byid)
   end
 
   def update_password(id, password_digest)
-	get_user_byid(id).update(password_digest: password_digest)
   end
 
   def update_listname(id, name)
-	get_todolist_byid(id).update(list_name: name)
   end 
 
   def delete_user(id)
-	get_user_byid(id).destroy
   end 
 
   def delete_todolist(id)
-	get_todolist_byid(id).destroy
   end
 end
