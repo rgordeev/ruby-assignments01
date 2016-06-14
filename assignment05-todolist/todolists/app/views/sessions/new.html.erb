@@ -6,7 +6,7 @@
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :username %>
-      <%= f.username_field :username, class: 'form-control' %>
+      <%= f.text_field :username, class: 'form-control' %>
 
       <%= f.label :password %>
       <%= f.password_field :password, class: 'form-control' %>
@@ -14,4 +14,4 @@
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
   </div>
-</div>
+</div>  
