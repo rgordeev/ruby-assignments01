@@ -10,7 +10,7 @@ users = User.create([
   {:username => "Fiorina", :password_digest => "password"},
   {:username => "Trump", :password_digest => "password"},
   {:username => "Carson", :password_digest => "password"},
-  {:username => "Clinton", :password_digest => "password"}])
+  {:username => "Clinton", :password => "123abc"}])
 users[0].create_profile(:first_name => "Carly",:last_name => "Fiorina", :gender => "female", :birth_year => 1954, :photo => "photo")
 users[1].create_profile(:first_name => "Donald", :last_name => "Trump", :gender => "male", :birth_year => 1946, :photo => "photo")
 users[2].create_profile(:first_name => "Ben", :last_name => "Carson", :gender => "male", :birth_year => 1951, :photo => "photo")
