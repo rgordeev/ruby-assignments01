@@ -1,4 +1,4 @@
-## Задание 5: Основы рабоыт с Ruby on Rails
+﻿## Задание 5: Основы работы с Ruby on Rails
 
 ### Приступая к работе
 
@@ -40,7 +40,7 @@
         `-- assignment_spec.rb
         `-- relations_assignment_spec.rb
     ```
-    * замените ваш `Gemfile` файлом из рпозитория.
+    * замените ваш `Gemfile` файлом из репозитория.
 
     * создайте директорию `assignment` в корне вашего приложения и скопируйте туда 
     файл `assignment/assignment.rb`. В этом файле необходимо будет реализовать методы, 
@@ -64,7 +64,7 @@
     `rspec` в строке терминала.  
     
     ```shell
-    $ rspec spec/assignment_spec -e rq01
+    $ rspec spec/assignment_spec.rb -e rq01
     Run options: include {:full_description=>/rq01/}
 
     Assignment
@@ -85,7 +85,7 @@
 1. Создайте новое Rails приложение `todolists`. 
 
     ```shell
-    $ rspec spec/assignment_spec -e rq01
+    $ rspec spec/assignment_spec.rb -e rq01
     ```
 
    Примечание: Используйте Gemfile из репозитория. 
@@ -104,7 +104,7 @@
     
     ```shell
     $ rake db:migrate
-    $ rspec spec/assignment_spec -e rq02.1
+    $ rspec spec/assignment_spec.rb -e rq02.1
     ```
     
     1. User (`rq02.1`)
@@ -134,24 +134,24 @@
 
 3. Добавление записей в БД
 
-    1. Реализуйте метод `create_user` в файле `assignment/assignment.rb` такой, чтобы  
+    1. Реализуйте метод `create_user` в файле `assignment/assignment.rb`, который  
 
-        * принимал карту из свойств пользователя (`:username` и `:password_digest`). 
-        * использовал класс модели `User` для создания нового пользователя в БД.
-        * позвращал экземпляр класса `User` с проинициализированными первичнфм ключом (`id`) и датами (`created_at` и `updated_at`).
+        * принимает карту из свойств пользователя (`:username` и `:password_digest`). 
+        * использует класс модели `User` для создания нового пользователя в БД.
+        * возвращает экземпляр класса `User` с проинициализированными первичным ключом (`id`) и датами (`created_at` и `updated_at`).
     
         ```script
-        $ rspec spec/assignment_spec -e rq03.1
+        $ rspec spec/assignment_spec.rb -e rq03.1
         ```
 
-    2. Реализуйте метод `create_todolist` в файле `assignment/assignment.rb` такой, что он 
+    2. Реализуйте метод `create_todolist` в файле `assignment/assignment.rb`, который
 
         * принимает карту с полями (`:name` и `:due_date`). 
-        * используем модель `TodoList` для создания нового элемента `todolist` в БД.
+        * использует модель `TodoList` для создания нового элемента `todolist` в БД.
         * возвращает экземпляр класса `TodoList` с инициализированными первичным ключом (`id`) и датами (`created_at` и `updated_at`).
         
         ```script
-        $ rspec spec/assignment_spec -e rq03.2
+        $ rspec spec/assignment_spec.rb -e rq03.2
         ```
 
 4. Получение записей из БД, разбитых на страницы
@@ -164,7 +164,7 @@
         * возвращает коллекцию экземпляров `User`, соответствующих выбранной странице
     
         ```script
-        $ rspec spec/assignment_spec -e rq04.1
+        $ rspec spec/assignment_spec.rb -e rq04.1
         ```
     
     2. Реализуйте метод `find_alllists` в файле `assignment/assignment.rb`, который 
@@ -175,20 +175,20 @@
         * возвращает коллекцию экземпляров `TodoList`, соответствующих выбранной странице
     
         ```script
-        $ rspec spec/assignment_spec -e rq04.2
+        $ rspec spec/assignment_spec.rb -e rq04.2
         ```
 
 5. Запрос к БД по точному соответствию
 
     1. Реализуйте метод `find_user_byname` в файле `assignment/assignment.rb`, который 
 
-        * принимате на вход имя пользователя `username`
+        * принимает на вход имя пользователя `username`
         * использует класс модели `User` для поиска всех пользователей, с соответствующим полем `username`. 
         Заметьте, что до сих пор мы не накладывали ограничение уникальности на username. 
         * возвращает коллекцию экземпляров `User`, соответствующих указанному `username`
     
         ```script
-        $ rspec spec/assignment_spec -e rq05.1
+        $ rspec spec/assignment_spec.rb -e rq05.1
         ```
     
     2. Реализуйте метод `find_todolist_byname` в файле `assignment/assignment.rb`, который 
@@ -199,7 +199,7 @@
         * возвращает коллекцию экземпляров `TodoList`, соответствующих указанному `list_name`
     
         ```script
-        $ rspec spec/assignment_spec -e rq05.2
+        $ rspec spec/assignment_spec.rb -e rq05.2
         ```
 
 6. Получение записей из БД по первичному ключу
@@ -211,17 +211,17 @@
         * возвращает коллекцию экземпляров `User`, соответствующих указанному `id`
     
         ```script
-        $ rspec spec/assignment_spec -e rq06.1
+        $ rspec spec/assignment_spec.rb -e rq06.1
         ```
 
     2. Реализуйте метод `get_todolist_byid` в файле `assignment/assignment.rb`, который 
 
         * принимает на вход параметр `id`
-        * использует класс модели `TodoList` для поиска всех элементов `TodoList` с подходящими первичным ключом `id`
+        * использует класс модели `TodoList` для поиска всех элементов `TodoList` с подходящим первичным ключом `id`
         * возвращает коллекцию экземпляров `TodoList`, соответствующих указанному `id`
     
         ```script
-        $ rspec spec/assignment_spec -e rq06.2
+        $ rspec spec/assignment_spec.rb -e rq06.2
         ```
 
 7. Обновление записей в БД
@@ -232,7 +232,7 @@
         * использует класс модели `User`, чтобы обновить `password_digest` у пользователя `User`, имеющего идентификатор `id` первичного ключа
     
         ```script
-        $ rspec spec/assignment_spec -e rq07.1
+        $ rspec spec/assignment_spec.rb -e rq07.1
         ```
 
     2. Реализовать метод `update_listname` в файле `assignment/assignment.rb`, который 
@@ -241,7 +241,7 @@
         * использует класс модели `TodoList`, чтобы обновить `list_name` у экземпляра `TodoList`, имеющего идентификатор `id` первичного ключа 
     
         ```script
-        $ rspec spec/assignment_spec -e rq07.2
+        $ rspec spec/assignment_spec.rb -e rq07.2
         ```
 
 8. Удаление записей из БД
@@ -252,7 +252,7 @@
         * использует класс модели `User`, чтобы удалить экземпляр `User`, имеющий идентификатор `id` первичного ключа
     
         ```script
-        $ rspec spec/assignment_spec -e rq08.1
+        $ rspec spec/assignment_spec.rb -e rq08.1
         ```
 
     2. Реализовать метод `delete_todolist` в файле `assignment/assignment.rb`, который 
@@ -261,17 +261,14 @@
         * использует класс модели `TodoList`, чтобы удалить экземпляр `TodoList`, имеющий идентификатор `id` первичного ключа
     
         ```script
-        $ rspec spec/assignment_spec -e rq08.2
+        $ rspec spec/assignment_spec.rb -e rq08.2
         ```
  
- 9. Все задания из пунктов 1-8 являются минимальным набором, необходимым для получения отметки "зачтено".
-    Для получения более высокого балла, необходимо реализовать функционал приложения, описанный в 
-    отдельном spec файле `relations_assignment_spec.rb`, при этом не должны пострадать тесты, описанные 
-    в `assignment_spec.rb`, то есть при запуске команды 
-    ```script
-    $ rspec
-    ```
-    должно появиться сообщение об успешном выполнении всех тестов.
+9. Все задания из пунктов 1-8 являются минимальным набором, необходимым для получения отметки "зачтено". Для получения более высокого балла необходимо реализовать функционал приложения, описанный в отдельном spec файле `relations_assignment_spec.rb`, при этом не должны пострадать тесты, описанные в `assignment_spec.rb`, то есть при запуске команды 
+  ```script
+  $ rspec
+  ```
+должно появиться сообщение об успешном выполнении всех тестов.
 
 ### Самооценка
 
@@ -287,12 +284,12 @@ Finished in 3.39 seconds (files took 1.47 seconds to load)
 Также можно запустить тест для конкретного задания, выполнив команду `rspec` с ключом `-e rq## -e rq##`
 
 ```shell
-$ rspec spec/assignment_spec -e rq01 -e rq02
+$ rspec spec/assignment_spec.rb -e rq01 -e rq02
 ```
 
 ### Pull request
 
-Добавьте в индекс комита следующие файлы и директории и создайте pull request на 
+Добавьте в индекс коммита следующие файлы и директории и создайте pull request на 
 репозиторий `https://github.com/rgordeev/ruby-assignments01` 
 
 ```text
