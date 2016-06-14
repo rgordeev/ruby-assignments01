@@ -16,7 +16,7 @@ class Assignment
   end
 
   def find_alllists(offset, limit)
-   TodoList.limit(limit).offset(offset).order("list_due_date desc")
+   TodoList.unscoped.all.offset(offset).limit(limit).order("list_due_date desc")
   end
 
   def find_user_byname(username)
