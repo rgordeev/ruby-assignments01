@@ -4,7 +4,7 @@ require 'rspec/its'
 describe "lesson2" do
 
   context "output array" do
-    result = `ruby assignmet02-solution.rb`
+    result = `ruby assignment02-solution.rb`
     lines = result.split("\n")
     numbers = []
     
@@ -36,7 +36,7 @@ describe "lesson2" do
   end
 
   context "implementation" do
-    src_code = File.open("assignmet02-solution.rb", "r").read
+    src_code = File.open("assignment02-solution.rb", "r").read
 
     it "should contain select" do
       expect(src_code).to include("select")
