@@ -1,0 +1,9 @@
+<h1>Login page</h1>
+Logged in succesfully<br>
+Items list has <%= @count %>  elements:
+<ul>
+   <% @list.todo_items.each do |item| %>
+   <li><%= item.title  %> , <%= item.due_date %></li>
+   <% end %>
+</ul>
+
