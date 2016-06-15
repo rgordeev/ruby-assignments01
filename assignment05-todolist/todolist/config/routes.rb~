@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 #resources :login
-get 'login/:id'=> 'login#show'
-get 'login' => 'login#show'
-post 'log' => 'login#log', as: 'routes'
-get 'logoutpage' => 'login#logoutpage', as: 'logout'
-post 'logout' => 'login#logout'
+:controller :login do
+get 'login_path' :show
+post 'log'  :log
+get 'logoutpage' :logoutpage
+post 'logout' :logout
+end
+#get 'login/:id'=> 'login#show', as: 'login_path'
+#post 'log' => 'login#log', as: 'routes_path'
+#get 'logoutpage' => 'login#logoutpage', as: 'logout_path'
+#post 'logout' => 'login#logout'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
