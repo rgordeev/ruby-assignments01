@@ -12,7 +12,7 @@ def logoutpage
 
 end
 def logout
-redirect_to action: :show
+redirect_to login_path
 end
 
 def log
