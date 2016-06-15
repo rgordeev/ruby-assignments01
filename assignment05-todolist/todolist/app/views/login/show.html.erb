@@ -1,0 +1,6 @@
+<h1>Welcome to login system!</h1>
+<%= form_tag :action => 'log' do %>
+user[username]: <%= text_field 'users', 'username' %><br>
+Password: <%= text_field 'users', 'password' %><br>
+<%= submit_tag "Login" %>
+<% end -%>

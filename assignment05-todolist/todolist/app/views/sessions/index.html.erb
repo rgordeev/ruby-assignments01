@@ -1,0 +1,11 @@
+<% if @users.blank? %>
+<p>There are not any users currently in the system.</p>
+<% else %>
+<p>These are the current users in our system</p>
+<h3>Users:</h3><br>
+<ul>
+   <% @users.each do |user| %>
+   <li><%= user.username %></li>
+   <% end %>
+</ul>
+<% end %>
