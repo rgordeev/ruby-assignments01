@@ -5,11 +5,9 @@ one:
   birth_year: 1
   first_name: MyString
   last_name: MyString
-  photo: MyString
 
 two:
   gender: MyString
   birth_year: 1
   first_name: MyString
   last_name: MyString
-  photo: MyString

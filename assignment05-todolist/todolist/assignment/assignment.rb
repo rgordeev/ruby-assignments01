@@ -4,51 +4,50 @@ require_relative '../config/environment'
 class Assignment
 
   def create_user(params)
-	User.create(:username => params[:username], :password_digest => params[:password_digest])
+    User.create(:username => params[:username], :password_digest => params[:password_digest])
   end
 
   def create_todolist(params)
-	TodoList.create(:list_name => params[:name], :list_due_date => params[:due_date])
+    TodoList.create(:list_name => params[:name], :list_due_date => params[:due_date])
   end
 
   def find_allusers(offset, limit)
-	User.unscoped.all.limit(limit).offset(offset).order(updated_at: :asc)
+    User.unscoped.all.offset(offset).limit(limit).order(updated_at: :asc)
   end
 
   def find_alllists(offset, limit)
-	TodoList.unscoped.all.limit(limit).offset(offset).order(list_due_date: :desc)
+    TodoList.unscoped.all.offset(offset).limit(limit).order(list_due_date: :desc)
   end
 
   def find_user_byname(username)
-	User.all.where(username: username)
-  end 
+    User.all.where(username: username)
+  end
 
   def find_todolist_byname(name)
-	TodoList.all.where(list_name: name)
-  end     
+    TodoList.all.where(list_name: name)
+  end
 
   def get_user_byid(id)
-	User.find(id)
+    User.find(id)
   end
 
   def get_todolist_byid(id)
-	TodoList.find(id)
+    TodoList.find(id)
   end
 
   def update_password(id, password_digest)
-	User.update(id, :password_digest => password_digest)
+    User.update(id, :password_digest => password_digest)
   end
 
   def update_listname(id, name)
-	TodoList.update(id, :list_name => name)
-  end 
+    TodoList.update(id, :list_name => name)
+  end
 
   def delete_user(id)
-	User.delete(id)
-  end 
+    User.delete(id)
+  end
 
   def delete_todolist(id)
-	TodoList.delete(id)
+    TodoList.delete(id)
   end
 end
-
