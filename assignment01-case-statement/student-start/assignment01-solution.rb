@@ -1,15 +1,17 @@
 some_var = "false"
 another_var = "nil"
 
-if some_var == "pink elephant"
-  puts "Don't think about the pink elephant!"
+puts case some_var
 
-elsif another_var.nil?
-  puts "Question mark in the method name?"
+when "pink elephant"
+   "Don't think about the pink elephant!"
 
-elsif some_var == false
-  puts "Looks like this one should execute"
+when false
+   "Looks like this one should execute"
+
+when another_var.nil?
+   "Question mark in the method name?"
 
 else
-  puts "I guess nothing matched... But why?"
+   "I guess nothing matched... But why?"
 end
