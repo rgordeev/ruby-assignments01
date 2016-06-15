@@ -1,6 +1,6 @@
 require 'rspec'
 require 'rspec/its'
-require_relative '../assignmet03-solution.rb'
+require_relative '../assignment03-solution.rb'
 
 describe "lesson3" do
 
