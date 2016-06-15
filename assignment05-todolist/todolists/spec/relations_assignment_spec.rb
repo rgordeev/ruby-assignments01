@@ -1,7 +1,7 @@
 require_relative '../config/environment'
 require 'rails_helper'
 
-describe "Relations Assignment" do
+feature "Relations Assignment" do
 
   before :all do
     $continue = true
@@ -180,7 +180,7 @@ describe "Relations Assignment" do
       expect(TodoList.reflect_on_association(:todo_items).options[:dependent]).to eq :destroy
     end
   end
-
+  
   context "rq07" do
       context "rq07a" do
         subject(:user) { User.new({:username => "goodUser", :password => "mux833c"}) }
@@ -207,16 +207,16 @@ describe "Relations Assignment" do
             end
         end
       end
-
+      
       context "rq07b" do
-
+      
         before :all do
             TodoItem.destroy_all
             TodoList.destroy_all
             User.destroy_all
             load "#{Rails.root}/db/seeds.rb"
         end
-
+        
         subject(:dbUser) { User.where(username:"Clinton").first }
 
         scenario "will only authenticate user with proper password" do
@@ -229,7 +229,7 @@ describe "Relations Assignment" do
             expect(dbUser.authenticate("123abc").todo_lists.count).to eq(number)
         end
       end
-
+      
       context "rq07c" do
         scenario "Login URI returns valid status" do
             visit (login_path)
@@ -243,7 +243,7 @@ describe "Relations Assignment" do
             expect(page.status_code).to eq(200)
         end
       end
-
+      
       context "rq07d" do
         scenario "Login URI returns valid page" do
           visit (login_path)
@@ -271,7 +271,7 @@ describe "Relations Assignment" do
           expect(URI.parse(page.current_url).path).to eq(login_path)
         end
       end
-
+    
       context "rq07f" do
         scenario "Logging out returns client to login page" do
           SessionsController.skip_before_action :ensure_login
