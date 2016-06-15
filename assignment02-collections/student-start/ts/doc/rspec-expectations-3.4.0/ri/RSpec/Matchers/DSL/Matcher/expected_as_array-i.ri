@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"expected_as_array:ETI"4RSpec::Matchers::DSL::Matcher#expected_as_array;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[	I"FReturns the expected value as an an array. This exists primarily ;TI"Fto aid in upgrading from RSpec 2.x, since in RSpec 2, `expected` ;TI"always returned an array. ;TI"@see #expected;T:
+@fileI"lib/rspec/matchers/dsl.rb;T:0@omit_headings_from_table_of_contents_below0F@I""RSpec::Matchers::DSL::Matcher;FcRDoc::NormalClass0

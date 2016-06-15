@@ -1,7 +1,7 @@
 require_relative '../config/environment'
 require 'rails_helper'
 
-feature "Relations Assignment" do
+describe "Relations Assignment" do
 
   before :all do
     $continue = true

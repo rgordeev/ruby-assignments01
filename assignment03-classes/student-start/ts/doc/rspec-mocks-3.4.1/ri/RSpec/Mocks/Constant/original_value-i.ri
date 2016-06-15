@@ -1,0 +1,3 @@
+U:RDoc::Attr[iI"original_value:ETI"*RSpec::Mocks::Constant#original_value;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=@return [Object, nil] The original value (e.g. before it;To:RDoc::Markup::Verbatim;	[I"5was mutated by rspec-mocks) of the constant, or
+;TI"4nil if the constant was not previously defined.;T:@format0:
+@fileI"$lib/rspec/mocks/mutate_const.rb;T:0@omit_headings_from_table_of_contents_below0F@I"RSpec::Mocks::Constant;FcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"rescued_exception:ETI"4RSpec::Matchers::DSL::Matcher#rescued_exception;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"PExposes the exception raised during the matching by `match_unless_raises`. ;TI">Could be useful to extract details for a failure message.;T:
+@fileI"lib/rspec/matchers/dsl.rb;T:0@omit_headings_from_table_of_contents_below0F@I""RSpec::Matchers::DSL::Matcher;FcRDoc::NormalClass0

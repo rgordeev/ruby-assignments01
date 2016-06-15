@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"9include_chain_clauses_in_custom_matcher_descriptions:ETI"\RSpec::Expectations::Configuration#include_chain_clauses_in_custom_matcher_descriptions;FI"W;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I">Sets if custom matcher descriptions and failure messages ;TI"@should include clauses from methods defined using `chain`. ;TI"@param value [Boolean];T:
+@fileI",lib/rspec/expectations/configuration.rb;T:0@omit_headings_from_table_of_contents_below0F@I"'RSpec::Expectations::Configuration;FcRDoc::NormalClass0
