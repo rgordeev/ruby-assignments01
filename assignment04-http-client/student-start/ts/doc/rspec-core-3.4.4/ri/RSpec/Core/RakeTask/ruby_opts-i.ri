@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"ruby_opts:ETI"$RSpec::Core::RakeTask#ruby_opts;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"=Command line options to pass to ruby. Defaults to `nil`.;T:
+@fileI" lib/rspec/core/rake_task.rb;T:0@omit_headings_from_table_of_contents_below0F@I"RSpec::Core::RakeTask;FcRDoc::NormalClass0

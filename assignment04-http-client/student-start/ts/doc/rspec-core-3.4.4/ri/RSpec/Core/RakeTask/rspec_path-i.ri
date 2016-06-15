@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"rspec_path:ETI"%RSpec::Core::RakeTask#rspec_path;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"9Path to RSpec. Defaults to the absolute path to the ;TI"1rspec binary from the loaded rspec-core gem.;T:
+@fileI" lib/rspec/core/rake_task.rb;T:0@omit_headings_from_table_of_contents_below0F@I"RSpec::Core::RakeTask;FcRDoc::NormalClass0

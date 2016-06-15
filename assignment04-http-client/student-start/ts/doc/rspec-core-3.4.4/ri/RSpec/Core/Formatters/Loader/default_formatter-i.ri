@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"default_formatter:ETI"6RSpec::Core::Formatters::Loader#default_formatter;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"L@return [String] the default formatter to setup, defaults to `progress`;T:
+@fileI"!lib/rspec/core/formatters.rb;T:0@omit_headings_from_table_of_contents_below0F@I"$RSpec::Core::Formatters::Loader;FcRDoc::NormalClass0

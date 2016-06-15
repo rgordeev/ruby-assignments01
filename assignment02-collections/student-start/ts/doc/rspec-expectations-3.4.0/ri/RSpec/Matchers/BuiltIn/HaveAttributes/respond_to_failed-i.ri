@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"respond_to_failed:ETI"?RSpec::Matchers::BuiltIn::HaveAttributes#respond_to_failed;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"@private;T:
+@fileI"3lib/rspec/matchers/built_in/have_attributes.rb;T:0@omit_headings_from_table_of_contents_below0F@I"-RSpec::Matchers::BuiltIn::HaveAttributes;FcRDoc::NormalClass0

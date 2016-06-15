@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"action:ETI"Diff::LCS::Change#action;FI"R;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"/Returns the action this Change represents.;T:
+@fileI"lib/diff/lcs/change.rb;T:0@omit_headings_from_table_of_contents_below0F@I"Diff::LCS::Change;FcRDoc::NormalClass0

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"status:ETI"1RSpec::Core::Example::ExecutionResult#status;FI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"9@return [Symbol] `:passed`, `:failed` or `:pending`.;T:
+@fileI"lib/rspec/core/example.rb;T:0@omit_headings_from_table_of_contents_below0F@I"*RSpec::Core::Example::ExecutionResult;FcRDoc::NormalClass0
